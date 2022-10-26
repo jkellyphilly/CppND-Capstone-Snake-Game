@@ -11,6 +11,7 @@ public:
     void setSize(int);
 
 private:
+    // TODO: rename this to "multiplier" or something
     int size_{1};
 };
 

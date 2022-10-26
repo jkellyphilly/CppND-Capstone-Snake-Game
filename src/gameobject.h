@@ -13,7 +13,8 @@ public:
     void setLocation(int, int);
 
 private:
-    SDL_Point location_;
+    // TODO: make a "size" attribute
+    SDL_Point location_; // TODO: rename to be "centroid"
 };
 
 #endif
