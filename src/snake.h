@@ -5,7 +5,7 @@
 #include "SDL.h"
 #include "gameobject.h"
 
-class Snake : public GameObject {
+class Snake {
  public:
   enum class Direction { kUp, kDown, kLeft, kRight };
 

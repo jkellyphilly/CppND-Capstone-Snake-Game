@@ -4,6 +4,7 @@
 CMakeFiles/SnakeGame.dir/src/controller.cpp.o
  /home/workspace/CppND-Capstone-Snake-Game/src/controller.cpp
  /home/workspace/CppND-Capstone-Snake-Game/src/controller.h
+ /home/workspace/CppND-Capstone-Snake-Game/src/gameobject.h
  /home/workspace/CppND-Capstone-Snake-Game/src/snake.h
  /usr/include/SDL2/SDL.h
  /usr/include/SDL2/SDL_assert.h
@@ -293,6 +294,7 @@ CMakeFiles/SnakeGame.dir/src/renderer.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/SnakeGame.dir/src/snake.cpp.o
+ /home/workspace/CppND-Capstone-Snake-Game/src/gameobject.h
  /home/workspace/CppND-Capstone-Snake-Game/src/snake.cpp
  /home/workspace/CppND-Capstone-Snake-Game/src/snake.h
  /usr/include/SDL2/SDL.h
