@@ -20,6 +20,10 @@ snake.h
 snake.h
 /home/workspace/CppND-Capstone-Snake-Game/src/snake.h
 
+/home/workspace/CppND-Capstone-Snake-Game/src/food.cpp
+food.h
+/home/workspace/CppND-Capstone-Snake-Game/src/food.h
+
 /home/workspace/CppND-Capstone-Snake-Game/src/food.h
 gameobject.h
 /home/workspace/CppND-Capstone-Snake-Game/src/gameobject.h
@@ -45,6 +49,12 @@ snake.h
 /home/workspace/CppND-Capstone-Snake-Game/src/snake.h
 food.h
 /home/workspace/CppND-Capstone-Snake-Game/src/food.h
+
+/home/workspace/CppND-Capstone-Snake-Game/src/gameobject.cpp
+gameobject.h
+/home/workspace/CppND-Capstone-Snake-Game/src/gameobject.h
+SDL.h
+/home/workspace/CppND-Capstone-Snake-Game/src/SDL.h
 
 /home/workspace/CppND-Capstone-Snake-Game/src/gameobject.h
 SDL.h

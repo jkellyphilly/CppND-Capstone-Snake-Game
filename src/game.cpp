@@ -57,12 +57,14 @@ void Game::PlaceFood() {
   while (true) {
     x = random_w(engine);
     y = random_h(engine);
+    // TODO: make this random between 1 and 2, usually 1
+    // also, come back and render on-screen when there's a multiplier
     size = random_s(engine);
     // Check that the location is not occupied by a snake item before placing
     // food.
     if (!snake.SnakeCell(x, y)) {
       food_.setLocation(x, y);
-      food_.setSize(size);
+      food_.setMultiplier(size);
       return;
     }
   }
@@ -78,7 +80,7 @@ void Game::Update() {
 
   // Check if there's food over here
   if (food_.xLocation() == new_x && food_.yLocation() == new_y) {
-    score += food_.getSize();
+    score += food_.getMultiplier();
     //score++;
     PlaceFood();
     // Grow snake and increase speed.

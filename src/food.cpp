@@ -1,7 +1,7 @@
 #include "food.h"
 
-int Food::getSize() const { return size_; }
+int Food::getMultiplier() const { return multiplier_; }
 
-void Food::setSize(int size) {
-    size_ = size;
+void Food::setMultiplier(int size) {
+    multiplier_ = size;
 }

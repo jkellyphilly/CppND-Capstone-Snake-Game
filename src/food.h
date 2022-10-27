@@ -7,12 +7,11 @@ class Food : public GameObject
 {
 public:
     Food(int x, int y) : GameObject(x, y) {};
-    int getSize() const;
-    void setSize(int);
+    int getMultiplier() const;
+    void setMultiplier(int);
 
 private:
-    // TODO: rename this to "multiplier" or something
-    int size_{1};
+    int multiplier_{1};
 };
 
 #endif
