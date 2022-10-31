@@ -6,7 +6,7 @@
 class Food : public GameObject
 {
 public:
-    Food(int x, int y) : GameObject(x, y) {};
+    Food(int x, int y, int grid_w, int grid_h) : GameObject(x, y, grid_w, grid_h) {};
     int getMultiplier() const;
     void setMultiplier(int);
 

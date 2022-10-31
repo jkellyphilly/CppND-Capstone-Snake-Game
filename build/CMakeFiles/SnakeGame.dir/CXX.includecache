@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/workspace/CppND-Capstone-Snake-Game/src/controller.cpp
-controller.h
-/home/workspace/CppND-Capstone-Snake-Game/src/controller.h
-iostream
--
-SDL.h
-/home/workspace/CppND-Capstone-Snake-Game/src/SDL.h
-snake.h
-/home/workspace/CppND-Capstone-Snake-Game/src/snake.h
-
 /home/workspace/CppND-Capstone-Snake-Game/src/controller.h
 snake.h
 /home/workspace/CppND-Capstone-Snake-Game/src/snake.h
@@ -50,12 +40,6 @@ snake.h
 food.h
 /home/workspace/CppND-Capstone-Snake-Game/src/food.h
 
-/home/workspace/CppND-Capstone-Snake-Game/src/gameobject.cpp
-gameobject.h
-/home/workspace/CppND-Capstone-Snake-Game/src/gameobject.h
-SDL.h
-/home/workspace/CppND-Capstone-Snake-Game/src/SDL.h
-
 /home/workspace/CppND-Capstone-Snake-Game/src/gameobject.h
 SDL.h
 /home/workspace/CppND-Capstone-Snake-Game/src/SDL.h
@@ -87,14 +71,6 @@ snake.h
 /home/workspace/CppND-Capstone-Snake-Game/src/snake.h
 food.h
 /home/workspace/CppND-Capstone-Snake-Game/src/food.h
-
-/home/workspace/CppND-Capstone-Snake-Game/src/snake.cpp
-snake.h
-/home/workspace/CppND-Capstone-Snake-Game/src/snake.h
-cmath
--
-iostream
--
 
 /home/workspace/CppND-Capstone-Snake-Game/src/snake.h
 vector
