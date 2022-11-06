@@ -77,7 +77,7 @@ void Game::Update() {
 
   snake.Update();
 
-  // Check if there's food over here
+  // Check if the snake overlaps with the food
   if (food_.xLocation() == snake.xLocation() && food_.yLocation() == snake.yLocation()) {
     score += food_.getMultiplier();
     PlaceFood();
