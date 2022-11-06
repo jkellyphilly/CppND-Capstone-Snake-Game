@@ -43,8 +43,7 @@ void Snake::UpdateHead() {
   head_x = fmod(head_x + this->getGridWidth(), this->getGridWidth());
   head_y = fmod(head_y + this->getGridHeight(), this->getGridHeight());
 
-  // Convert back to int and set the x/y location of the head
-  // TODO: rounding down here hurts us. 
+  // set location of head
   this->setLocation(head_x, head_y);
 }
 
@@ -60,26 +59,9 @@ void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell) 
     this->incrementSize();
   }
 
-  // Check if the snake has died.
-  // Implement collision checker here
-  for (auto const &item : body) {
-    if (current_head_cell.x == item.x && current_head_cell.y == item.y) {
-      alive = false;
-    }
+  if (doesOverlap(current_head_cell)) {
+    alive = false;
   }
 }
 
 void Snake::GrowBody() { growing = true; }
-
-// Inefficient method to check if cell is occupied by snake.
-bool Snake::SnakeCell(int x, int y) {
-  if (x == this->xLocation() && y == this->yLocation()) {
-    return true;
-  }
-  for (auto const &item : body) {
-    if (x == item.x && y == item.y) {
-      return true;
-    }
-  }
-  return false;
-}

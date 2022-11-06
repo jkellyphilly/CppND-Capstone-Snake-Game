@@ -28,3 +28,12 @@ float GameObject::getHeadYFloat() const { return head_y_f_; }
 void GameObject::incrementSize() {
     size_ = size_ + 1;
 }
+
+bool GameObject::doesOverlap(SDL_Point pt) {
+    for (auto const &item : this->body) {
+        if (pt.x == item.x && pt.y == item.y) {
+            return true;
+        }
+    }
+    return false;
+}

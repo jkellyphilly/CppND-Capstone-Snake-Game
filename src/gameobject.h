@@ -23,6 +23,7 @@ public:
     float getHeadXFloat() const;
     float getHeadYFloat() const;
     std::vector<SDL_Point> body;
+    bool doesOverlap(SDL_Point pt);
 
 private:
     SDL_Point head_;

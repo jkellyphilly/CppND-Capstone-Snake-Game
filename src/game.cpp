@@ -63,7 +63,8 @@ void Game::PlaceFood() {
     multiper = random_s(engine);
     // Check that the location is not occupied by a snake item before placing
     // food.
-    if (!snake.SnakeCell(x, y)) {
+    SDL_Point new_point = SDL_Point{static_cast<int>(x), static_cast<int>(y)};
+    if (!snake.doesOverlap(new_point)) {
       food_.setLocation(x, y);
       food_.setMultiplier(multiper);
       return;
