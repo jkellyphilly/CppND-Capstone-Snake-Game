@@ -3,8 +3,9 @@
 #include "SDL.h"
 
 Game::Game(std::size_t grid_width, std::size_t grid_height)
-    : snake(grid_width, grid_height),
-      food_(0, 0, grid_width, grid_height),
+    : snake(grid_width / 2.0, grid_height / 2.0, grid_width, grid_height),
+      // initial x/y is irrelevant because the food is immediately moved anyway
+      food_(0.0, 0.0, grid_width, grid_height),
       engine(dev()),
       random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1)),
@@ -53,18 +54,18 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 }
 
 void Game::PlaceFood() {
-  int x, y, size;
+  int x, y, multiper;
   while (true) {
     x = random_w(engine);
     y = random_h(engine);
     // TODO: make this random between 1 and 2, usually 1
     // also, come back and render on-screen when there's a multiplier
-    size = random_s(engine);
+    multiper = random_s(engine);
     // Check that the location is not occupied by a snake item before placing
     // food.
     if (!snake.SnakeCell(x, y)) {
       food_.setLocation(x, y);
-      food_.setMultiplier(size);
+      food_.setMultiplier(multiper);
       return;
     }
   }
@@ -75,13 +76,10 @@ void Game::Update() {
 
   snake.Update();
 
-  int new_x = static_cast<int>(snake.head_x);
-  int new_y = static_cast<int>(snake.head_y);
-
   // Check if there's food over here
-  if (food_.xLocation() == new_x && food_.yLocation() == new_y) {
-    score += food_.getMultiplier();
-    //score++;
+  if (food_.xLocation() == snake.xLocation() && food_.yLocation() == snake.yLocation()) {
+    // score += food_.getMultiplier();
+    score++;
     PlaceFood();
     // Grow snake and increase speed.
     snake.GrowBody();
@@ -90,4 +88,4 @@ void Game::Update() {
 }
 
 int Game::GetScore() const { return score; }
-int Game::GetSize() const { return snake.size; }
+int Game::GetSize() const { return snake.getSize(); }

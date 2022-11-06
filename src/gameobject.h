@@ -14,13 +14,22 @@ public:
     SDL_Point getLocation() const;
     int xLocation() const;
     int yLocation() const;
-    void setLocation(int, int);
+    void setLocation(float, float);
+    int getSize() const;
+    void incrementSize();
+    int getGridWidth() const;
+    int getGridHeight() const;
+    float getHeadXFloat() const;
+    float getHeadYFloat() const;
 
 private:
     SDL_Point head_;
     int grid_width_;
     int grid_height_;
-    // size_{1};
+    int size_{1};
+    float head_x_f_;
+    float head_y_f_;
+    // make body a vector of SDL_Point's
 };
 
 #endif
