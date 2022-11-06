@@ -1,6 +1,7 @@
 #ifndef GAMEOBJECT_H
 #define GAMEOBJECT_H
 
+#include <vector>
 #include "SDL.h"
 
 class GameObject
@@ -21,6 +22,7 @@ public:
     int getGridHeight() const;
     float getHeadXFloat() const;
     float getHeadYFloat() const;
+    std::vector<SDL_Point> body;
 
 private:
     SDL_Point head_;
@@ -29,7 +31,6 @@ private:
     int size_{1};
     float head_x_f_;
     float head_y_f_;
-    // make body a vector of SDL_Point's
 };
 
 #endif

@@ -26,7 +26,6 @@ class Snake : public GameObject {
 
   float speed{0.1f};
   bool alive{true};
-  std::vector<SDL_Point> body; // only snake and obstacle will need this. so maybe on them to define.
 
  private:
   void UpdateHead();

@@ -47,6 +47,8 @@ food.h
 /home/workspace/CppND-Capstone-Snake-Game/src/food.h
 
 /home/workspace/CppND-Capstone-Snake-Game/src/gameobject.h
+vector
+-
 SDL.h
 /home/workspace/CppND-Capstone-Snake-Game/src/SDL.h
 
