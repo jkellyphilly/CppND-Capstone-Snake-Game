@@ -9,7 +9,7 @@ Game::Game(std::size_t grid_width, std::size_t grid_height)
       engine(dev()),
       random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1)),
-      random_s(0, 4) {
+      random_s(1, 2) {
   PlaceFood();
 }
 
@@ -79,8 +79,7 @@ void Game::Update() {
 
   // Check if there's food over here
   if (food_.xLocation() == snake.xLocation() && food_.yLocation() == snake.yLocation()) {
-    // score += food_.getMultiplier();
-    score++;
+    score += food_.getMultiplier();
     PlaceFood();
     // Grow snake and increase speed.
     snake.GrowBody();

@@ -2,6 +2,6 @@
 
 int Food::getMultiplier() const { return multiplier_; }
 
-void Food::setMultiplier(int size) {
-    multiplier_ = size;
+void Food::setMultiplier(int multiplier) {
+    multiplier_ = multiplier;
 }

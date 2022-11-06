@@ -2,7 +2,6 @@
 #include "SDL.h"
 
 void GameObject::setLocation(float x, float y) {
-    // TODO: do error handling here (i.e. don't go off the board)
     head_x_f_ = x;
     head_y_f_ = y;
     head_.x = static_cast<int>(x);
